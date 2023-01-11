@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   extends: [
     'eslint:recommended',
@@ -20,11 +21,17 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     'arrow-body-style': 'off',
-    'prefer-arrow-callback': 'off'
+    'prefer-arrow-callback': 'off',
+    'react/prop-types': 0
   },
   settings: {
     react: {
       version: 'detect'
     }
+  },
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    process: true
   }
 }

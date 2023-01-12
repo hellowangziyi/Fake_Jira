@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 import qs from 'qs'
 
 import { API } from '../../utils/axios'
-import { BASE_URL } from '../../utils/url'
 import { cleanObj, useDebounce, useMount } from '../../utils'
 
 export const ProjectListScreen = () => {
@@ -33,7 +32,7 @@ export const ProjectListScreen = () => {
     }
 
     fetchData()
-  }, [])
+  })
   useEffect(() => {
     const fetchData = async () => {
       const result = await API.get(

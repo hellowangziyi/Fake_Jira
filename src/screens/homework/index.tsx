@@ -8,9 +8,9 @@ export const Homework = () => {
   ]
   const { newArr, clear, removeIndex, add } = useArray(person)
   useMount(() => {
-    console.log(newArr.notRE)
-    add({ name: 'dad' })
-    removeIndex('123')
+    // console.log(newArr.notRE)
+    // add({ name: 'dad' })
+    // removeIndex('123')
   })
   return (
     <div>

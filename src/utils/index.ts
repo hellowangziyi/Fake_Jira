@@ -2,8 +2,8 @@ import { useCallback, useEffect, useState } from 'react'
 
 export const isFalse = (val: any) => (val === 0 ? true : !val)
 
-export const cleanObj = (obj: object) => {
-  const result: object = { ...obj }
+export const cleanObj = <T>(obj: T): T => {
+  const result: T = { ...obj }
   Object.keys(result).forEach((key) => {
     const value = result[key]
     if (isFalse(value)) {
